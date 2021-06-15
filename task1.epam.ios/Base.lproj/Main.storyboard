@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Mhd-CG-1MM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Detail View Controller-->
+        <scene sceneID="dFB-dF-kgM">
+            <objects>
+                <viewController id="jpP-7M-3ko" customClass="DetailViewController" customModule="task1_epam_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Uun-s3-TSF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DpF-el-8yT">
+                                <rect key="frame" x="87" y="104" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="UZy-7f-huy"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="240" id="Wij-N2-vzM"/>
+                                    <constraint firstAttribute="width" secondItem="DpF-el-8yT" secondAttribute="height" multiplier="1:1" id="i9f-Xr-0FQ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R9B-m2-y66">
+                                <rect key="frame" x="54" y="375" width="59.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W28-81-tf9">
+                                <rect key="frame" x="257" y="370" width="69.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Anv-Bw-fSQ">
+                                <rect key="frame" x="54" y="424" width="55" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W4k-9y-hDb">
+                                <rect key="frame" x="20" y="473" width="374" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="W28-81-tf9" firstAttribute="top" secondItem="DpF-el-8yT" secondAttribute="bottom" constant="26" id="42b-If-JAs"/>
+                            <constraint firstItem="W4k-9y-hDb" firstAttribute="top" secondItem="Anv-Bw-fSQ" secondAttribute="bottom" constant="25" id="8Pw-Ls-sp8"/>
+                            <constraint firstItem="Xzy-Va-avr" firstAttribute="trailing" secondItem="W4k-9y-hDb" secondAttribute="trailing" constant="20" id="8cw-7g-jF5"/>
+                            <constraint firstItem="Anv-Bw-fSQ" firstAttribute="top" secondItem="R9B-m2-y66" secondAttribute="bottom" constant="25" id="KNh-fJ-S6Z"/>
+                            <constraint firstItem="DpF-el-8yT" firstAttribute="top" secondItem="Xzy-Va-avr" secondAttribute="top" constant="16" id="L1p-LY-Oip"/>
+                            <constraint firstItem="R9B-m2-y66" firstAttribute="top" secondItem="DpF-el-8yT" secondAttribute="bottom" constant="31" id="Nuh-lj-LRT"/>
+                            <constraint firstItem="W4k-9y-hDb" firstAttribute="leading" secondItem="Xzy-Va-avr" secondAttribute="leading" constant="20" id="Ro2-bU-7wW"/>
+                            <constraint firstItem="Anv-Bw-fSQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Xzy-Va-avr" secondAttribute="leading" constant="20" id="eeJ-Zr-Qg8"/>
+                            <constraint firstItem="W28-81-tf9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="R9B-m2-y66" secondAttribute="trailing" constant="80" id="hN3-0B-6dt"/>
+                            <constraint firstItem="DpF-el-8yT" firstAttribute="centerX" secondItem="Uun-s3-TSF" secondAttribute="centerX" id="lkO-xm-Pgw" userLabel="Image View.centerX = centerX"/>
+                            <constraint firstItem="R9B-m2-y66" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Xzy-Va-avr" secondAttribute="leading" constant="20" id="njk-4Y-aZq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Xzy-Va-avr"/>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionTextView" destination="W4k-9y-hDb" id="jwU-d5-XhD"/>
+                        <outlet property="meatImageView" destination="DpF-el-8yT" id="rlA-JM-ji7"/>
+                        <outlet property="meatNameLabel" destination="R9B-m2-y66" id="xfV-Nt-eq7"/>
+                        <outlet property="priceLabel" destination="Anv-Bw-fSQ" id="MLH-M3-iLM"/>
+                        <outlet property="ratingLabel" destination="W28-81-tf9" id="C3p-iY-wUj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wJ1-7k-kYC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="682.60869565217399" y="267.85714285714283"/>
+        </scene>
+        <!--My Favourite Meat!-->
+        <scene sceneID="1e1-Md-pGD">
+            <objects>
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="B7t-df-xAF" customClass="MasterTableViewController" customModule="task1_epam_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ypa-FZ-CH2" customClass="MasterTable">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="oneCell" id="svG-lt-cUP">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="svG-lt-cUP" id="zye-Nd-v6q">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="B7t-df-xAF" id="vhT-VB-V1Q"/>
+                            <outlet property="delegate" destination="B7t-df-xAF" id="VfO-Wn-6OZ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="My Favourite Meat!" largeTitleDisplayMode="always" id="bOB-t9-FGR"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BqS-j7-MgV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1603" y="-380"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="IPe-oe-m3I">
+            <objects>
+                <navigationController id="bez-UM-DeL" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QLg-EJ-Sdk">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="B7t-df-xAF" kind="relationship" relationship="rootViewController" id="M8s-Hh-nzl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DMV-So-ZJm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="684" y="-380"/>
+        </scene>
+        <!--Master View Controller-->
+        <scene sceneID="kwV-fz-MgG">
+            <objects>
+                <splitViewController id="Mhd-CG-1MM" customClass="MasterViewController" customModule="task1_epam_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="bez-UM-DeL" kind="relationship" relationship="masterViewController" id="NB5-he-8ZV"/>
+                        <segue destination="jpP-7M-3ko" kind="relationship" relationship="detailViewController" id="j5E-rK-JI1"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B1e-Nd-f3M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-234" y="-56"/>
+        </scene>
+    </scenes>
+</document>
