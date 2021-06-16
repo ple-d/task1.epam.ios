@@ -22,6 +22,8 @@ class MasterTableViewController: UITableViewController {
         super.viewDidLoad()
 
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: identifier)
+
+        self.navigationController?.navigationBar.prefersLargeTitles = true
     }
 
 
@@ -35,21 +37,34 @@ class MasterTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
+        var cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
+        
         let currentItem = meat[indexPath.row]
         
-
+        
         cell.textLabel?.text = currentItem.title
         if let price = currentItem.price {
-            cell.detailTextLabel?.text = "\(currentItem.price)"
+            cell.detailTextLabel?.text = "\(String(describing: price))"
+        } else {
+            cell.detailTextLabel?.text = ""
+            cell.detailTextLabel?.isHidden = true
+        }
+
+        if cell.detailTextLabel == nil {
+            cell = UITableViewCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: identifier)
+        }
+        cell.textLabel?.text = currentItem.title
+        if let price = currentItem.price {
+            cell.detailTextLabel?.text = "\(String(describing: price))"
         } else {
             cell.detailTextLabel?.text = ""
         }
-        
+
         
         let image = UIImage(named: currentItem.imageName)
         cell.imageView?.image = image
-        cell.imageView?.layer.cornerRadius = 23
+        cell.imageView?.layer.cornerRadius = 24
+        cell.imageView?.contentMode = .scaleToFill
         cell.imageView?.layer.masksToBounds = true
         return cell
     }
